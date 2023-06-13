@@ -216,9 +216,9 @@ def update_vcf_from_grmpy(inVcfFilename, grmpyOutput, outVcfFilename, sample_nam
                 if sample in vcf_samples:
                     for k, v in raw_record.samples[sample].items():
                         record.samples[sample][k] = v
-                    old_gt = "/".join(sorted([str(val)
-                                              if val is not None else "." for val in raw_record.samples[sample]["GT"]]))
-                    record.samples[sample]["OLD_GT"] = old_gt
+                    #old_gt = "/".join(sorted([str(val)
+                    #                          if val is not None else "." for val in raw_record.samples[sample]["GT"]]))
+                    #record.samples[sample]["OLD_GT"] = old_gt
                 else:
                     record.samples[sample]["OLD_GT"] = [None]
             record.samples[sample]["GT"] = [None]
